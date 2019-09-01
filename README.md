@@ -15,6 +15,7 @@ Things you may want to cover:
 # ChatSpace DB設計
 ## usersテーブル
 |Column|Type|Options|
+|------|----|-------|
 |user_name|string|null: false, add_index|
 |email|string|null: false, unique: true|
 |password|string|null: false|
