@@ -13,23 +13,20 @@
   &__header{
     background-color: #253141;
     height: 100px;
+    line-height: 100px;
     padding:0 20px;
     .user-name{
-      float: left;
-      line-height: 100px;
-      font-size: 16px;
+      display: inline-block;
       color: $white;
       font-weight: bold;
     }
     .icon{
       float: right;
+      padding-left: 4.8px; 
       line-height: 100px;
-      .edit{
-        float: right;
-      }
-      .cog{
-        float: right;
-      }
+      color: $white;
+      text-decoration: none;
+      cursor: pointer;
     }
   }
   .group{
@@ -66,13 +63,15 @@
       padding-top: 35px;
       padding-bottom: 15px;
     }
-      .main-edit{
+      .edit{
         height: 38px;
         line-height: 40px;
         border: solid 1px $light_blue;
         padding: 0 20px;
         top: 30px;
         right: 40px;
+        color: $light_blue; 
+        text-decoration: none;
         cursor: pointer;
         position: absolute;
       }
@@ -112,8 +111,13 @@
     padding-top: 20px;
     padding-left: 40px;
     position: relative;
-    &__message-box{
+    .message-box{
       float: left;
+      color: $dark_gray;
+      height: 50px;
+      width: calc(100vw - 300px - 80px - 100px - 25px);
+      padding-left: 10px;
+      border: none;
     }
     &__icon{
       height: 50px;
@@ -121,9 +125,17 @@
       right: 165px;
       font-size: 1.3rem;
       position: absolute;
+      z-index: 1;
     }
-    &__send{
+    .icon-option{
+      cursor: pointer;
+    }
+    .image-option{
+      display: none;
+    }
+    .send{
       background-color: $light_blue;
+      color: $white;
       text-align: center;
       height: 47px;
       width: 98px;
@@ -133,6 +145,7 @@
       padding-left: 1px;
       cursor: pointer;
       position: absolute;
+      text-decoration: none;
     }
   }
 }

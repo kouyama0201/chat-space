@@ -1,18 +1,15 @@
-.info
-  グループを作成しました
+-# .info
+-#   グループを作成しました
 .chat-left
   .chat-left__header
     .user-name
       Kouyama
-    .icon
-      .edit
-      = link_to "https://tech-camp.in/expert" do
-        %i.fa.fa-edit{:style =>"cursor:pointer; font-size:16px; color:#FFFFFF; text-decoration:none;"}
-        %span<>
-      .cog
-      = link_to "https://tech-camp.in/" do
-        %i.fa.fa-cog{:style =>"cursor:pointer; font-size:16px; color:#FFFFFF; text-decoration:none;"}
-        %span<>
+    = link_to "https://tech-camp.in/" do
+      %i.fa.fa-cog{class: "icon"}
+      %span<>
+    = link_to "https://tech-camp.in/expert" do
+      %i.fa.fa-edit{class: "icon"}
+      %span<>
   .group
     .group__name
       group1-name
@@ -26,8 +23,8 @@
   .chat-main__header
     .main-left
       group1-name
-    .main-edit
-      %a{:href => "https://tech-camp.in/inazuma/summer", :style => "color:#38AEF0; text-decoration:none;"} Edit
+    = link_to "https://tech-camp.in/inazuma/summer" do
+      %e{class: "edit"}Edit
     .main-group
       Member：Kouyama
   .messages
@@ -44,11 +41,10 @@
     .text
       こんにちは！
   .form
-    .form__message-box
-      %input{:placeholder => "type a message", :style => "border:none; height:50px; width:calc(100vw - 300px - 80px - 100px - 25px); padding-left:10px; color: #434A54;", :type => "text"}/
+    %input{placeholder: "type a message", type: "text", class: "message-box"}/
     .form__icon
-      <label class="message-box__image" for="message_image"><i class="fa fa-image" style="cursor:pointer;" ></i>
-      <input class="message-box__image__file" type="file" id="message_image" style="display:none;" >
-      </label>
-    .form__send
-      %a{:href => "https://di-v.co.jp/", :style => "color:#FFFFFF; text-decoration:none;"} Send
+      %label
+        %i.fa.fa-image{class: "icon-option"}
+        %input{class: "image-option", type: "file"}/
+    = link_to "https://di-v.co.jp/" do
+      %s{class: "send"}Send
