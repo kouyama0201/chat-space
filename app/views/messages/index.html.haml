@@ -1,0 +1,50 @@
+-# .info
+-#   グループを作成しました
+.chat-left
+  .chat-left__header
+    .user-name
+      Kouyama
+    = link_to "https://tech-camp.in/" do
+      %i.fa.fa-cog{class: "icon"}
+      %span<>
+    = link_to "https://tech-camp.in/expert" do
+      %i.fa.fa-edit{class: "icon"}
+      %span<>
+  .group
+    .group__name
+      group1-name
+    .group__first-message
+      テスト
+    .group__name
+      group2-name
+    .group__first-message
+      b
+.chat-main
+  .chat-main__header
+    .main-left
+      group1-name
+    = link_to "https://tech-camp.in/inazuma/summer" do
+      %e{class: "edit"}Edit
+    .main-group
+      Member：Kouyama
+  .messages
+    .group-name
+      Kouyama
+    .created-at
+      2019/09/01(Sun) 12:10:49
+    .text
+      テスト
+    .group-name
+      Kouyama
+    .created-at
+      2019/09/06(Fri) 14:14:13
+    .text
+      こんにちは！
+  .form
+    %input{placeholder: "type a message", type: "text", class: "message-box"}/
+    .form__icon
+      %label
+        %i.fa.fa-image{class: "icon-option"}
+        %input{class: "image-option", type: "file"}/
+    = link_to "https://di-v.co.jp/" do
+      %s{class: "send"}Send
