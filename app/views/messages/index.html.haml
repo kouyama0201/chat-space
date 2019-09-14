@@ -1,5 +1,5 @@
 .chat-left
-  = render 'shared/side_bar'
+  = render 'devise/shared/side_bar'
 .chat-main
   .chat-main__header
     .main-left
@@ -22,10 +22,10 @@
     .text
       こんにちは！
   .form
-    %input{placeholder: "type a message", type: "text", class: "message-box"}/
-    .form__icon
-      %label
-        %i.fa.fa-image{class: "icon-option"}
-        %input{class: "image-option", type: "file"}/
-    = link_to "https://di-v.co.jp/" do
-      %s{class: "send"}Send
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image do
+          = fa_icon 'picture-o', class: 'icon-option'
+          = f.file_field :image, class: 'image-option'
+      = f.submit 'Send', class: 'send'
