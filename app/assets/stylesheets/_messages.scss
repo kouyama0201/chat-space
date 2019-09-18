@@ -3,38 +3,40 @@
   width: 300px;
   float: left;
   &__header{
-    background-color: #253141;
+    background-color: $side_blue_dark;
     height: 100px;
     line-height: 100px;
     padding:0 20px;
     .user-name{
       display: inline-block;
-      color: $white;
+      color: $white2;
       font-weight: bold;
     }
     .icon{
       float: right;
       padding-left: 4.8px; 
       line-height: 100px;
-      color: $white;
+      color: $white2;
       text-decoration: none;
       cursor: pointer;
     }
   }
+}
+.groups{
   .group{
     height: calc(100vh - 120px);
     padding: 20px 20px 0;
-    background-color: #2f3e51;
-    color: $white;
+    background-color: $side_blue_light;
     &__name{
+      color: $white2;
       font-size: 15px;
       margin-bottom: 5px;
       cursor: pointer;
     }
-    &__first-message{
+    &__message{
+      color: $white2;
       font-size: 11px;
       margin-bottom: 40px;
-      cursor: pointer;
     }
   }
 }
@@ -44,7 +46,7 @@
   width: calc(100vw - 300px);
   padding-left: 300px;
   &__header{
-    background-color: #FFF;
+    background-color: $white;
     height: 99px;
     padding-left: 40px;
     border-bottom: solid 1px #eeeeee;
@@ -78,21 +80,21 @@
     padding-left: 40px;
     .group-name{
       float: left;
-      color: $dark_gray;
+      color: $black;
       font-size: 16px;
       font-weight: bold;
       padding-top: 46px;
     }
     .created-at{
       float: left;
-      color: $light_gray;
+      color: $light_gray2;
       font-size: 12px;
       padding-top: 46px;
       padding-left: 10px;
     }
     .text{
       font-size: 14px;
-      color: $dark_gray;
+      color: $black;
       padding-top: 80px;
       padding-bottom: 4px;
     }
@@ -105,7 +107,7 @@
     position: relative;
     .message-box{
       float: left;
-      color: $dark_gray;
+      color: $black;
       height: 50px;
       width: calc(100vw - 300px - 80px - 100px - 25px);
       padding-left: 10px;
@@ -127,7 +129,7 @@
     }
     .send{
       background-color: $light_blue;
-      color: $white;
+      color: $white2;
       text-align: center;
       height: 47px;
       width: 98px;

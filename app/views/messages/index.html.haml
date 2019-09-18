@@ -1,22 +1,5 @@
 .chat-left
-  .chat-left__header
-    .user-name
-      = current_user.name
-    = link_to edit_user_path(current_user) do
-      %i.fa.fa-cog{class: "icon"}
-      %span<>
-    = link_to new_group_path do
-      %i.fa.fa-edit{class: "icon"}
-      %span<>
-  .group
-    .group__name
-      group1-name
-    .group__first-message
-      テスト
-    .group__name
-      group2-name
-    .group__first-message
-      b
+  = render 'shared/side_bar'
 .chat-main
   .chat-main__header
     .main-left

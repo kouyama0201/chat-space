@@ -1,0 +1,17 @@
+.chat-left__header
+  .user-name
+    = current_user.name
+  = link_to edit_user_path(current_user) do
+    %i.fa.fa-cog{class: "icon"}
+    %span<>
+  = link_to new_group_path do
+    %i.fa.fa-edit{class: "icon"}
+    %span<>
+.groups
+  .group
+    - current_user.groups.each do |group|
+      = link_to '#' do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません。
