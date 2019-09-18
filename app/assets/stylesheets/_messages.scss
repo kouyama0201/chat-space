@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .chat-left {
   height: 100vh;
   width: 300px;
@@ -17,7 +21,6 @@
       padding-left: 4.8px; 
       line-height: 100px;
       color: $white2;
-      text-decoration: none;
       cursor: pointer;
     }
   }
@@ -27,6 +30,7 @@
     height: calc(100vh - 120px);
     padding: 20px 20px 0;
     background-color: $side_blue_light;
+    overflow: scroll;
     &__name{
       color: $white2;
       font-size: 15px;
@@ -65,7 +69,6 @@
         top: 30px;
         right: 40px;
         color: $light_blue; 
-        text-decoration: none;
         cursor: pointer;
         position: absolute;
       }
@@ -78,6 +81,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     padding-left: 40px;
+    overflow: scroll;
     .group-name{
       float: left;
       color: $black;
@@ -139,7 +143,6 @@
       padding-left: 1px;
       cursor: pointer;
       position: absolute;
-      text-decoration: none;
     }
   }
 }

@@ -3,11 +3,14 @@
 .chat-main
   .chat-main__header
     .main-left
-      group1-name
-    = link_to "https://tech-camp.in/inazuma/summer" do
+      = @group.name
+    = link_to edit_group_path(@group.id) do
       %e{class: "edit"}Edit
     .main-group
-      Member：Kouyama
+      Member：
+      - @group.users.each do |user|
+        %span<>
+          = user.name
   .messages
     = render @messages
   .form
