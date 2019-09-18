@@ -105,7 +105,7 @@
     padding-top: 20px;
     padding-left: 40px;
     position: relative;
-    .message-box{
+    &__message{
       float: left;
       color: $black;
       height: 50px;
@@ -113,7 +113,7 @@
       padding-left: 10px;
       border: none;
     }
-    &__icon{
+    &__mask{
       height: 50px;
       line-height: 50px;
       right: 165px;
