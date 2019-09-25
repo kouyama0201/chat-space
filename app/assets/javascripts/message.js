@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
-      $('#message_content').val('');
+      $('#new_message')[0].reset();
       $('.send').prop('disabled', false);
     })
     .fail(function(data){
