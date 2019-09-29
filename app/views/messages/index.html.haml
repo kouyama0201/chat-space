@@ -9,7 +9,7 @@
     .main-group
       Member：
       - @group.users.each do |user|
-        %span<>
+        %li.main-group__member
           = user.name
   .messages
     = render @messages
