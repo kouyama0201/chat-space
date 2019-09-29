@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function(){
     search_list.append(html);
   }
   function appendMember(member){
-    var html = `<div class='chat-group-user clearfix js-chat-member' id="chat-group-user-${member.id}"'>
+    var html = `<div class='chat-group-user' data-user-id="${member.id}" id="chat-group-user-${member.id}"'>
                   <input name='group[user_ids][]' type='hidden' value=${member.id}>
                   <p class='chat-group-user__name'>${member.name}</p>
                 <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn' data-user-id="${member.id}" data-user-name="${member.name}">削除</div>
@@ -32,11 +32,19 @@ $(document).on('turbolinks:load', function(){
     })
     .done(function(users){
       $('#user-search-result').empty();
+      var array = [];
+      $('.chat-group-user').each(function(){
+        var current_listed_id = $(this).data("user-id")
+        array.push(current_listed_id);
+      })
       if (input.length === 0) {
       }
       else if (users.length !== 0){
         users.forEach(function(user){
+          const result = $.inArray(user.id, array);
+          if (result === -1) {
           appendUser(user)
+          }
         });
       }
       else {
