@@ -1,17 +1,26 @@
-# README
+# ChatSpace
+グループを作成し、ユーザー同士でメッセージのやりとりが出来るチャットアプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 機能一覧
+* ユーザー登録・ログイン機能(devise)
+* メッセージ送信機能(Ajax)
+* メッセージ自動更新機能(Ajax)
+* グループ作成機能
+* グループ編集機能
+  - ユーザー検索機能(インクリメンタルサーチ)
+* 画像投稿機能(carriewave)
+* 単体テスト(RSpec)
+* 自動デプロイ(Capistrano)
+* Webサーバー(nginx)
+* アプリケーションサーバー（unicorn）
 
-Things you may want to cover:
+# 使用技術
+* Ruby 2.5.1
+* Ruby on Rails 5.0.7.2
+* MySQL 5.6.43
+* haml,Sass,jQuery
+* Git,GitHub
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
 # ChatSpace DB設計
 ## usersテーブル
 |Column|Type|Options|
@@ -52,13 +61,3 @@ Things you may want to cover:
 ### Association
 - belongs_to :group
 - belongs_to :user
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
