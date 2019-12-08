@@ -12,7 +12,7 @@
 * 単体テスト(RSpec)
 * 自動デプロイ(Capistrano)
 * Webサーバー(nginx)
-* アプリケーションサーバー（unicorn）
+* アプリケーションサーバー(unicorn)
 
 # 使用技術
 * Ruby 2.5.1
