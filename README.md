@@ -10,9 +10,6 @@
   - ユーザー検索機能(インクリメンタルサーチ)
 * 画像投稿機能(carriewave)
 * 単体テスト(RSpec)
-* 自動デプロイ(Capistrano)
-* Webサーバー(nginx)
-* アプリケーションサーバー(unicorn)
 
 # 使用技術
 * Ruby 2.5.1
